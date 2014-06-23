@@ -1,4 +1,4 @@
-testDeck
+Project_WorldCupSlidify
 ========
 
 This is a test deck for publishing a slidify document.
@@ -9,7 +9,7 @@ Make an edit to this readme file on gh-pages branch. (You can do this directly o
 
 Commit the change.
 
-Go to username.github.io/testDeck/index.html
+Go to clopudsley.github.io/testDeck/index.html
 And the presentation should be rendered
 
 
