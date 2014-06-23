@@ -45,3 +45,10 @@ matches_played <- matches_won+matches_drawn+matches_lost
 percentage_wins <- as.integer((matches_won/matches_played)*100)
 result <-paste("Percentage of matches won = " , percentage_wins)
 result</textarea>
+
+--- &interactive
+## Results = Markup
+
+<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='markup' style='display:none'>x <-11+12
+x</textarea>
+

@@ -80,3 +80,12 @@ percentage_wins <- as.integer((matches_won/matches_played)*100)
 result <-paste("Percentage of matches won = " , percentage_wins)
 result
 ```
+
+--- &interactive
+## Results = Markup
+
+```{r opts.label = 'interactive', results = 'markup'}
+x <-11+12
+x
+```
+
