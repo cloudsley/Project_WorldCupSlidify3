@@ -20,6 +20,8 @@ knit        : slidify::knit2slides
         b) A plot of percentage winds by a single country across all years
 4. Data downloaded from: 
         http://www.theguardian.com/news/datablog/2010/may/05/world-cup-historical-statistics
+5. The interactive Slide 5 does not run in github but runs in Rstudio
+I think this is a recognised problem. See: https://github.com/ramnathv/slidify/issues/360
 
 
 --- .class #id 
@@ -37,10 +39,6 @@ knit        : slidify::knit2slides
 --- &interactive
 
 ## Slide 5: Example calculation of percentage of matches won
-
-This does not run in github but runs in Rstudio
-I think this is a recognised problem.
-See: https://github.com/ramnathv/slidify/issues/360
 
 
 <textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>matches_won<-5
