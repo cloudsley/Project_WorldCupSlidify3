@@ -6,8 +6,9 @@ job         :
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets    : [shiny, interactive]
+widgets     : [shiny, interactive, bootstrap]
 mode        : selfcontained # {standalone, draft
+knit        : slidify::knit2slides
 ---
 
 ## Slide 2: Background
@@ -32,3 +33,15 @@ mode        : selfcontained # {standalone, draft
 ## Slide 4: Example plot of a single country (e.g. England) over all the year of the World Cup (data: 1930 - 2006)
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
+
+--- &interactive
+
+## Slide 5: Example calculation of percentage of matches won
+
+<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='markup' style='display:none'>matches_won<-5
+matches_drawn<- 2
+matches_lost <- 2
+matches_played <- matches_won+matches_drawn+matches_lost
+percentage_wins <- as.integer((matches_won/matches_played)*100)
+result <-paste("Percentage of matches won = " , percentage_wins)
+result</textarea>

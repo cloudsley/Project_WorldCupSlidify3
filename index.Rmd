@@ -6,8 +6,9 @@ job         :
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets    : [shiny, interactive]
+widgets     : [shiny, interactive, bootstrap]
 mode        : selfcontained # {standalone, draft
+knit        : slidify::knit2slides
 ---
 
 ## Slide 2: Background
@@ -64,4 +65,18 @@ p <- ggplot(data_sub, aes(x = Year, y = (Won/(Won+Drawn+Lost)*100))) + geom_bar(
         theme(axis.text.x = element_text(size = 10,colour="black",vjust = 0, angle = 90))+
         theme(axis.text.y = element_text(size = 12,colour="black"))
         print(p)
+```
+
+--- &interactive
+
+## Slide 5: Example calculation of percentage of matches won
+
+```{r opts.label = 'interactive', results = 'markup'}
+matches_won<-5
+matches_drawn<- 2
+matches_lost <- 2
+matches_played <- matches_won+matches_drawn+matches_lost
+percentage_wins <- as.integer((matches_won/matches_played)*100)
+result <-paste("Percentage of matches won = " , percentage_wins)
+result
 ```
