@@ -38,6 +38,11 @@ knit        : slidify::knit2slides
 
 ## Slide 5: Example calculation of percentage of matches won
 
+This does not run in github but runs in Rstudio
+I think this is a recognised problem.
+See: https://github.com/ramnathv/slidify/issues/360
+
+
 <textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>matches_won<-5
 matches_drawn<- 2
 matches_lost <- 2
