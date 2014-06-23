@@ -44,7 +44,7 @@ matches_lost <- 2
 matches_played <- matches_won+matches_drawn+matches_lost
 percentage_wins <- as.integer((matches_won/matches_played)*100)
 result <-paste("Percentage of matches won = " , percentage_wins)
-result</textarea>
+print(result)</textarea>
 
 --- &interactive
 ## Results = Markup
