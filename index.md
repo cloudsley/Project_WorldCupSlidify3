@@ -38,7 +38,7 @@ knit        : slidify::knit2slides
 
 ## Slide 5: Example calculation of percentage of matches won
 
-<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='markup' style='display:none'>matches_won<-5
+<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>matches_won<-5
 matches_drawn<- 2
 matches_lost <- 2
 matches_played <- matches_won+matches_drawn+matches_lost
@@ -49,6 +49,6 @@ result</textarea>
 --- &interactive
 ## Results = Markup
 
-<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='markup' style='display:none'>x <-11+12
+<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>x <-11+12
 x</textarea>
 
