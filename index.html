@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test deck</title>
+  <title>Football World Cup data</title>
   <meta charset="utf-8">
-  <meta name="description" content="Test deck">
-  <meta name="author" content="">
+  <meta name="description" content="Football World Cup data">
+  <meta name="author" content="MD">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -13,7 +13,8 @@
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/interactive/css/aceeditor.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
@@ -32,9 +33,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Test deck</h1>
-    <h2></h2>
-    <p><br/></p>
+    <h1>Football World Cup data</h1>
+    <h2>Percentage wins</h2>
+    <p>MD<br/></p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,13 +44,17 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Slide 2: Background</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+<li>Aim: To produce a simple R Shiny application</li>
+<li>Concept: An application that displays the percentage of matches won in the Football World Cup</li>
+<li>Detail: The data will be displayed as:
+    a) A plot of percentage wins by all countries within a tournament; or 
+    b) A plot of percentage winds by a single country across all years</li>
+<li>Data downloaded from: 
+    <a href="http://www.theguardian.com/news/datablog/2010/may/05/world-cup-historical-statistics">http://www.theguardian.com/news/datablog/2010/may/05/world-cup-historical-statistics</a></li>
 </ol>
 
   </article>
@@ -58,13 +63,10 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Slide 3: Example plot of each countries&#39; performance within a tournament (e.g. 1966)</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">plot(1:10, 1:10)
-</code></pre>
-
-<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+    <p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -76,13 +78,13 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Slide 2: Background'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Slide 3: Example plot of each countries&#39; performance within a tournament (e.g. 1966)'>
          2
       </a>
     </li>
@@ -95,6 +97,13 @@
   <![endif]-->
 </body>
   <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="libraries/widgets/interactive/js/interactive.js"></script>
+
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <script src="shared/slider/js/jquery.slider.min.js"></script>
+  <script src="shared/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="shared/slider/css/jquery.slider.min.css"></link>
   
   <!-- LOAD HIGHLIGHTER JS FILES -->
   <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>

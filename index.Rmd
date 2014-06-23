@@ -1,26 +1,45 @@
 ---
-title       : Test deck
-subtitle    : 
-author      : 
+title       : Football World Cup data
+subtitle    : Percentage wins
+author      : MD
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : selfcontained # {standalone, draft}
+widgets    : [shiny, interactive]
+mode        : selfcontained # {standalone, draft
 ---
 
-## Read-And-Delete
+## Slide 2: Background
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+1. Aim: To produce a simple R Shiny application
+2. Concept: An application that displays the percentage of matches won in the Football World Cup
+3. Detail: The data will be displayed as:
+        a) A plot of percentage wins by all countries within a tournament; or 
+        b) A plot of percentage winds by a single country across all years
+4. Data downloaded from: 
+        http://www.theguardian.com/news/datablog/2010/may/05/world-cup-historical-statistics
+
 
 --- .class #id 
 
-## Slide 2
+## Slide 3: Example plot of each countries' performance within a tournament (e.g. 1966)
 
-```{r, fig.height=5, fig.width=5}
-plot(1 : 10, 1 : 10)
+```{r echo = F, results = 'asis', fig.height=6, fig.width=8}
+
+library(ggplot2)
+data<-read.csv("world_cup_data.csv")
+names(data) <- c("Year","Team", "ISO.code","Goals.for", "Goals.against", "Penalties","Matches", "Shots.on.goal", "Shots.wide", "Free.kicks", "Offside","Corners", "Won", "Drawn", "Lost")
+# Year <- unique(sort(data$Year))
+# Country <- unique(sort(data$Team))
+data_sub<-subset(data, Year == "1966")                                
+p <- ggplot(data_sub, aes(x = Team, y = (Won/(Won+Drawn+Lost)*100))) + geom_bar(stat = "identity")+
+        scale_fill_manual("", values=c("target"="darkgrey","try"="blue"))+
+        scale_y_continuous(breaks=seq(0,100,10),limits=c(0,100),"% Matches won")+
+        theme(axis.title.x = element_text(size = 14, vjust = -1))+
+        theme(axis.title.y = element_text(size = 14, angle=90, vjust=0))+
+        theme(axis.text.x = element_text(size = 10,colour="black",vjust = 0, angle = 90))+
+        theme(axis.text.y = element_text(size = 12,colour="black"))
+        print(p)
 ```
 
