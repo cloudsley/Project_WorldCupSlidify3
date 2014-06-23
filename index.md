@@ -38,17 +38,15 @@ knit        : slidify::knit2slides
 
 ## Slide 5: Example calculation of percentage of matches won
 
+This runs in RStudio but creates an error in GitHub - this is a recognised problem - be good to know a workaround
+see https://github.com/ramnathv/slidify/issues/360
+
 <textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>matches_won<-5
 matches_drawn<- 2
 matches_lost <- 2
 matches_played <- matches_won+matches_drawn+matches_lost
 percentage_wins <- as.integer((matches_won/matches_played)*100)
 result <-paste("Percentage of matches won = " , percentage_wins)
-print(barplot(percentage_wins, ylim=c(0,100), main = "% wins"))</textarea>
+barplot(percentage_wins, ylim=c(0,100), main = "% wins")</textarea>
 
---- &interactive
-## Results = Markup
-
-<textarea class='interactive' id='interactive{{slide.num}}' data-cell='{{slide.num}}' data-results='asis' style='display:none'>x <-11+12
-x</textarea>
 

@@ -93,13 +93,16 @@
 <div class='row-fluid'>
   <div class='span5'>
     <form id="knitForm4" data-cell="4">
-      <p><textarea class='interactive' id='interactive4' data-cell='4' data-results='asis' style='display:none'>matches_won&lt;-5
+      <p>This runs in RStudio but creates an error in GitHub - this is a recognised problem - be good to know a workaround
+see <a href="https://github.com/ramnathv/slidify/issues/360">https://github.com/ramnathv/slidify/issues/360</a></p>
+
+<p><textarea class='interactive' id='interactive4' data-cell='4' data-results='asis' style='display:none'>matches_won&lt;-5
 matches_drawn&lt;- 2
 matches_lost &lt;- 2
 matches_played &lt;- matches_won+matches_drawn+matches_lost
 percentage_wins &lt;- as.integer((matches_won/matches_played)*100)
 result &lt;-paste(&quot;Percentage of matches won = &quot; , percentage_wins)
-print(barplot(percentage_wins, ylim=c(0,100), main = &quot;% wins&quot;))</textarea></p>
+barplot(percentage_wins, ylim=c(0,100), main = &quot;% wins&quot;)</textarea></p>
 
       <div id='aceeditor4' style="height:px;"></div>
       <div class='interactive btn-toolbar pull-left'>
@@ -132,49 +135,6 @@ print(barplot(percentage_wins, ylim=c(0,100), main = &quot;% wins&quot;))</texta
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Results = Markup</h2>
-  </hgroup>
-  <article data-timings="">
-     
-<div class='row-fluid'>
-  <div class='span5'>
-    <form id="knitForm5" data-cell="5">
-      <p><textarea class='interactive' id='interactive5' data-cell='5' data-results='asis' style='display:none'>x &lt;-11+12
-x</textarea></p>
-
-      <div id='aceeditor5' style="height:px;"></div>
-      <div class='interactive btn-toolbar pull-left'>
-        <div class='btn-group'>
-          <a class='btn btn-small action-button' id='runCode5' data-action='runCode'
-            data-cell='5' rel='tooltip' data-title='Run Code'>
-            <i class='icon-play'></i>
-          </a>
-          <a class='btn btn-small iBtn' id='testCode5' data-action='testCode'
-             data-cell='5' rel='tooltip' data-title='Test Code'>
-            <i class='icon-check'></i>
-          </a>
-          <a class='btn btn-small iBtn' id='clearResult5' data-action='clearResult'
-             data-cell='5' rel='tooltip' data-title='Clear Output'>
-            <i class="icon-remove"></i>
-          </a>
-          <a class='btn  btn-small iBtn' id='getHint5' rel='tooltip' 
-            data-title="Get Hint" data-action='getHint'
-            data-cell='5' data-hint="">
-            <i class="icon-bookmark"></i>
-          </a>
-        </div>
-      </div>    </form>
-  </div>
-  <div class='span7'>
-    <div id="knitResult5" class='shiny-html-output'></div>
-  </div>
-</div>
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
     <slide class="backdrop"></slide>
   </slides>
   <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
@@ -201,12 +161,6 @@ x</textarea></p>
       <a href="#" target="_self" rel='tooltip' 
         data-slide=4 title='Slide 5: Example calculation of percentage of matches won'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Results = Markup'>
-         5
       </a>
     </li>
   </ul>
