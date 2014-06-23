@@ -27,3 +27,8 @@ mode        : selfcontained # {standalone, draft
 
 ![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
 
+--- .class #id 
+
+## Slide 4: Example plot of a single country (e.g. England) over all the year of the World Cup (data: 1930 - 2006)
+
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
